@@ -1,7 +1,7 @@
 <template>
   <AppLayout>
     <RepertoireList @play-audio="setAudio" />
-    <StickyAudioPlayer :audio-url="currentAudioUrl" :track-name="currentTrackName" />
+    <StickyAudioPlayer :audio-url="currentAudioUrl" :track-name="currentTrackName" @close="clearAudio" />
   </AppLayout>
 </template>
 
@@ -17,5 +17,10 @@ const currentTrackName = ref('');
 function setAudio({ url, name }) {
   currentAudioUrl.value = url;
   currentTrackName.value = name;
+}
+
+function clearAudio() {
+  currentAudioUrl.value = '';
+  currentTrackName.value = '';
 }
 </script>

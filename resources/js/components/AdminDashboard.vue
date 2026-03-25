@@ -218,9 +218,9 @@ function buildCharts() {
             ticks: {
               color: '#9ca3af',
               maxRotation: 30,
-              callback: function (val, idx) {
-                const label = this.getLabelForValue(idx);
-                return label.length > 15 ? label.substring(0, 15) + '…' : label;
+              callback: function (val) {
+                const label = this.getLabelForValue(val);
+                return label && label.length > 15 ? label.substring(0, 15) + '…' : label;
               },
             },
             grid: { color: '#333333' },
