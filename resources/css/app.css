@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-dark font-semibold py-2 px-4 rounded-lg hover:bg-gold-light transition-colors duration-200;
+  }
+  .btn-ghost {
+    @apply border border-dark-border text-white py-2 px-4 rounded-lg hover:border-gold hover:text-gold transition-colors duration-200;
+  }
+  .card {
+    @apply bg-dark-card rounded-xl border border-dark-border p-6;
+  }
+  .input-dark {
+    @apply bg-dark-surface border border-dark-border text-white rounded-lg px-4 py-2 focus:outline-none focus:border-gold transition-colors duration-200 w-full;
+  }
+  .badge-pagato {
+    @apply bg-green-900 text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-attesa {
+    @apply bg-amber-900 text-amber-300 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-prova {
+    @apply bg-blue-900 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-concerto {
+    @apply bg-yellow-900 text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+}
